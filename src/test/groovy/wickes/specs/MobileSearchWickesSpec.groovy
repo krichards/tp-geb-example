@@ -19,7 +19,7 @@ class MobileSearchWickesSpec extends GebReportingSpec {
         at MobileResultsPage
 
         and:
-        firstResultLink.text() == "Wickes-Ultra-Gold-Screws-6x100mm"
+        firstResultLink.text() == "Wickes Ultra Gold Screws 6x100mm PK50"
 
         when:
         firstResultLink.click()
