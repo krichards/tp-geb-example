@@ -8,8 +8,8 @@ class MobileHomePage extends Page {
     static at = { title ==~ "Wickes.*" }
 
     static content = {
-        form { $('form[name="search_form"]')}
-        searchText { form.find('input[name="text"]') }
-        searchButton  { form.find('.accmob-mainSearch-button') }
+        form { $('form', name:"search_form")}
+        searchText { form.find('input', name:"text") }
+        searchButton  { form.find('input.button') }
     }
 }

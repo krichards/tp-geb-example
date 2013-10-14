@@ -9,15 +9,12 @@ repositories {
 ext.drivers = ["firefox", "chrome"]
 
 dependencies {
-    def gebVersion = "0.9.0-RC-3"
-    def seleniumVersion = "2.30.0"
+    def gebVersion = "0.9.1"
+    def seleniumVersion = "2.35.0"
 
     // If using Spock, need to depend on geb-spock
     testCompile "org.gebish:geb-spock:$gebVersion"
     testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
-
-    // If using JUnit, need to depend on geb-junit (3 or 4)
-    testCompile "org.gebish:geb-junit4:$gebVersion"
 
     // Drivers
     drivers.each { driver ->
@@ -38,13 +35,13 @@ drivers.each { driver ->
 
         // Override default to avoid IP problems
         systemProperty "java.net.preferIPv4Stack", true
-            systemProperty "webdriver.chrome.driver", "d:\\chromedriver\\chromedriver.exe"
+        systemProperty "webdriver.chrome.driver", "C:\\Users\\it_training\\IdeaProjects\\chromedriver.exe"
     }
 }
 
 test {
-	dependsOn drivers.collect { tasks["${it}Test"] }
-	enabled = false
+    dependsOn drivers.collect { tasks["${it}Test"] }
+    enabled = false
 }
 
 task wrapper(type: Wrapper) {
