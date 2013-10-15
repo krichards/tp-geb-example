@@ -7,9 +7,9 @@ import wickes.pages.MobileHomePage
 import wickes.pages.MobileProductDetailsPage
 import wickes.pages.MobileResultsPage
 
-@Unroll('#scenario')
 class MobileSearchWickesSpec extends GebReportingSpec {
 
+    @Unroll('#scenario')
     def "searching for gold should find screws"() {
         when:
         to MobileHomePage

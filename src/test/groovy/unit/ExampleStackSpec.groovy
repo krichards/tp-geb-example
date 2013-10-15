@@ -5,7 +5,7 @@ import spock.lang.Specification
 
 class ExampleStackSpec extends Specification {
 
-    @Shared Stack stack
+    Stack stack
 
     def setup() {
         stack = new Stack()
