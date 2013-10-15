@@ -17,7 +17,7 @@ class GoogleSpec extends GebReportingSpec {
         q = "wikipedia"
 
         then:
-        at GoogleResultsPage
+        at GoogleResultsPage  // This relies on Javascript and will not be testable with htmlunit
 
         and:
         firstResultLink.text() == "Wikipedia"
