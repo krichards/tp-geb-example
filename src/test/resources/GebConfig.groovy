@@ -7,10 +7,13 @@
 
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 waiting {
 	timeout = 2
 }
+
+driver = { new ChromeDriver() }
 
 environments {
 	
@@ -26,6 +29,14 @@ environments {
 		driver = { new FirefoxDriver() }
 	}
 
+    htmlunit {
+        driver = { new HtmlUnitDriver() }
+    }
+
 }
+
+reportsDir = "./build/test-results"
+
+
 
 // To run the tests with all browsers just run “./gradlew test”
