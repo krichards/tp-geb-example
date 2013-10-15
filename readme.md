@@ -1,7 +1,7 @@
 This is an example of incorporating Geb and Spock into a Gradle build for TravisPerkins.
 
-http://www.gebish.org/ - Overview and reference manual
-http://spockframework.org - Spock testing framework
+See http://www.gebish.org/ (Overview and reference manual), and http://spockframework.org (Spock testing framework) for
+more information.
 
 The build is setup to work with FireFox, Chrome and Htmlunit.
 Have a look at the `build.gradle` and the `src/test/resources/GebConfig.groovy` files.
